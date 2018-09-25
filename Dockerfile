@@ -12,5 +12,5 @@ USER root
 RUN mv /etc/sudoers.ORIG /etc/sudoers
 USER cwuser
 ENTRYPOINT [ "./run.sh" ]
-EXPOSE 80 9160
+EXPOSE 8080 9160
 
