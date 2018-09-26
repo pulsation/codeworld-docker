@@ -11,6 +11,7 @@ RUN ./install.sh
 USER root
 RUN mv /etc/sudoers.ORIG /etc/sudoers
 USER cwuser
+RUN build/bin/codeworld-auth init-accounts -d codeworld-auth.db && build/bin/codeworld-auth generate-secret -s codeworld-auth.txt
 ENTRYPOINT [ "./run.sh" ]
 EXPOSE 8080 9160
 
